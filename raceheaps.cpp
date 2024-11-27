@@ -1,3 +1,7 @@
+
+// Check README for info including theme, tasks and  etc..
+
+
 #include <iostream>
 #include <vector>
 #include <string>
