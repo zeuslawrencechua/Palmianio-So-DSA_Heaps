@@ -95,7 +95,7 @@ void removeTopCar(vector<Car>& heap, bool isMinHeap) {
     swap(heap[0], heap[heap.size() - 1]);  // Swap the root with the last element
     heap.pop_back();  // Remove the last element (formerly the root)
 
-    // Re-heapify the heap to maintain the heap property
+ 
     if (isMinHeap)
         heapifyMin(heap, heap.size(), 0);  // Min-Heap: heapify from the root
     else
@@ -117,8 +117,8 @@ void convertHeap(vector<Car>& heap, bool toMinHeap) {
 
 // Main function - Executes the heap operations and visualizes results
 int main() {
-    vector<Car> heap;           // Create a vector to store the heap
-    bool isMinHeap = true;      // Flag to track if the heap is a Min-Heap (true) or Max-Heap (false)
+    vector<Car> heap;           
+    bool isMinHeap = true;      
 
     // Add sample lap times (insert cars into the heap)
     insertLapTime(heap, {"Car #5 - Lightning", 95}, isMinHeap);
@@ -129,16 +129,16 @@ int main() {
     cout << "Heap after adding lap times:" << endl;
     visualizeRankings(heap);
 
-    // Remove the fastest car (Min-Heap property)
+
     cout << "Removing fastest car..." << endl;
     removeTopCar(heap, isMinHeap);
     visualizeRankings(heap);
 
     // Convert the heap to Max-Heap for slowest lap times
     cout << "Converting to Max-Heap for slowest lap times..." << endl;
-    isMinHeap = false;  // Set flag to false for Max-Heap
+    isMinHeap = false;  
     convertHeap(heap, isMinHeap);  // Convert the heap to Max-Heap
-    visualizeRankings(heap);  // Visualize rankings in Max-Heap order
+    visualizeRankings(heap); 
 
-    return 0;  // End of program
+    return 0; 
 }
