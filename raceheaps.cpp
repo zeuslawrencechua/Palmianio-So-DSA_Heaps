@@ -1,5 +1,5 @@
 
-// Check README for info including theme, tasks and  etc..
+// Check README ( The entire text can be found in "CODE" )for info including theme, tasks and etc...
 
 
 #include <iostream>
